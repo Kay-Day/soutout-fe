@@ -16,7 +16,7 @@ import { logout } from "./userActions";
 export const listPdf = () => async (dispatch) => {
   try {
     dispatch({ type: PDF_LIST_REQUEST });
-    const { data } = await axios.get(`http://localhost:5000/api/pdf/all`);
+    const { data } = await axios.get(`https://103.151.238.40/api/pdf/all`);
     dispatch({ type: PDF_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -33,7 +33,7 @@ export const listPdf = () => async (dispatch) => {
 export const listPdfDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PDF_DETAILS_REQUEST });
-    const { data } = await axios.get(`http://localhost:5000/api/pdf/${id}`);
+    const { data } = await axios.get(`https://103.151.238.40/api/pdf/${id}`);
     dispatch({ type: PDF_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -63,7 +63,7 @@ export const createPdfReview =
         },
       };
 
-      await axios.post(`http://localhost:5000/api/pdf/${productId}/review`, review, config);
+      await axios.post(`https://103.151.238.40/api/pdf/${productId}/review`, review, config);
       dispatch({ type: PDF_CREATE_REVIEW_SUCCESS });
     } catch (error) {
       const message =

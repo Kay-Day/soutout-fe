@@ -1,7 +1,7 @@
 {
   "name": "mybook",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://103.151.238.40",
   "private": true,
   "dependencies": {
     "@react-pdf-viewer/core": "^2.4.1",
