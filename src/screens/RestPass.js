@@ -26,7 +26,7 @@ const RestPass = () => {
                 return;
             return;
             } else {
-                const res = await axios.put("https://103.151.238.40/api/users/change-password", { password: email, id: id });
+                const res = await axios.put("http://103.151.238.40/api/users/change-password", { password: email, id: id });
                 if (res.status === 200)
                 {
                     setPassword("")

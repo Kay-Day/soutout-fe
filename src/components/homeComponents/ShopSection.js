@@ -22,7 +22,7 @@ const ShopSection = (props) => {
 
   useEffect(async () => {
     if (item) {
-      const res = await axios.get(`https://103.151.238.40/api/products/searchHere/${item}`);
+      const res = await axios.get(`http://103.151.238.40/api/products/searchHere/${item}`);
       if (res.status === 200) {
         setPr(res.data);
       }

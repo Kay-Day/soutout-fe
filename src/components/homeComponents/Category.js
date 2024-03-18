@@ -12,7 +12,7 @@ const Category = () => {
 
   useEffect(() => {
     return new Promise(async () => {
-      const res = await axios.get("https://103.151.238.40/api/category/all/status");
+      const res = await axios.get("http://103.151.238.40/api/category/all/status");
       if (res.status === 200) {
         setListCategory(res.data);
       }

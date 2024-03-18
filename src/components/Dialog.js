@@ -20,7 +20,7 @@ const Dialog = ({ idParent, isOpenDialog, setCloseDialog, onClickOpen }) => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `https://103.151.238.40/api/category/all/status-detail/${idParent}`
+        `http://103.151.238.40/api/category/all/status-detail/${idParent}`
       );
       if (res.status === 200) {
         setListItem(res.data);
