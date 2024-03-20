@@ -10,7 +10,7 @@ const ContactInfo = () => {
             <i class="fab fa-facebook-f"></i>
             </div>
             <h5>Facebook</h5>
-            <a href="https://www.facebook.com/Kaykaier">
+            <a href="https://www.facebook.com/profile.php?id=61556979696267">
               <p>Soutout Group</p>
             </a>
           </div>
