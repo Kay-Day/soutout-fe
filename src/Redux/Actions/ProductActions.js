@@ -22,7 +22,7 @@ export const listProduct =
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
       const { data } = await axios.get(
-        `http://103.151.238.40/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
+        `http://localhost:5000/api/products?keyword=${keyword}&pageNumber=${pageNumber}`
       );
       dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
     } catch (error) {
@@ -39,7 +39,7 @@ export const listProduct =
 export const listSearch = (type) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_SEARCH_REQUEST });
-    const { data } = await axios.get(`http://103.151.238.40/api/products/search/${type}`);
+    const { data } = await axios.get(`http://localhost:5000/api/products/search/${type}`);
     dispatch({ type: PRODUCT_LIST_SEARCH_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -56,7 +56,7 @@ export const listSearch = (type) => async (dispatch) => {
 export const listProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    const { data } = await axios.get(`http://103.151.238.40/api/products/${id}`);
+    const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
@@ -86,7 +86,7 @@ export const createProductReview =
         },
       };
 
-      await axios.post(`http://103.151.238.40/api/products/${productId}/review`, review, config);
+      await axios.post(`http://localhost:5000/api/products/${productId}/review`, review, config);
       dispatch({ type: PRODUCT_CREATE_REVIEW_SUCCESS });
     } catch (error) {
       const message =

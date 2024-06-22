@@ -14,7 +14,7 @@ const ChangePass = () => {
     const submitHandler = async(e) => {
         e.preventDefault();
 
-        const res = await axios.post("http://103.151.238.40/api/users/forgot-password", { email: email });
+        const res = await axios.post("http://localhost:5000/api/users/forgot-password", { email: email });
         if (res.status === 200) {
             setEmail("");
             toast.success("Please Checking Email");

@@ -146,7 +146,7 @@ const Header = () => {
             <div className="row">
               <div className="col-md-3 col-4 d-flex align-items-center mb-4">
                 <Link className="navbar-brand" to="/">
-                  <img alt="logo" src="https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/432368699_122107207838232656_6577726678867768568_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=UrF4gyqGPlAAX-Fzgg5&_nc_oc=AdicbvROzHmgWNWnCI_CTw700eczZQC4sirSYN6-GSELgTugwPJshNGEW0NZeBYn-CZLLf-IbOvzl0moDOG930_D&_nc_ht=scontent.fsgn2-6.fna&oh=00_AfBTDp3MppwL0z_-N0qKzSUFzBmtz3w9Eq_Buvit5b_qgw&oe=65FF577C" />
+                  <img alt="logo" src="/images/logo-mb.png" />
                 </Link>
               </div>
 

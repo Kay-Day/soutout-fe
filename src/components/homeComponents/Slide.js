@@ -9,7 +9,7 @@ const Slide = () => {
 
   useEffect(() => {
     new Promise(async () => {
-      const res = await axios.get("http://103.151.238.40/api/category/all/banner");
+      const res = await axios.get("http://localhost:5000/api/category/all/banner");
       if (res.data) {
         setItems(res.data);
       }
