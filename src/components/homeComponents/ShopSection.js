@@ -22,7 +22,7 @@ const ShopSection = (props) => {
 
   useEffect(async () => {
     if (item) {
-      const res = await axios.get(`http://localhost:5000/api/products/searchHere/${item}`);
+      const res = await axios.get(`https://soutout.online/api/products/searchHere/${item}`);
       if (res.status === 200) {
         setPr(res.data);
       }

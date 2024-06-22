@@ -26,7 +26,7 @@ const RestPass = () => {
                 return;
             return;
             } else {
-                const res = await axios.put("http://localhost:5000/api/users/change-password", { password: email, id: id });
+                const res = await axios.put("https://soutout.online/api/users/change-password", { password: email, id: id });
                 if (res.status === 200)
                 {
                     setPassword("")

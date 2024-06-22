@@ -32,7 +32,7 @@ export const createOrder = (order) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`http://localhost:5000/api/orders`, order, config);
+    const { data } = await axios.post(`https://soutout.online/api/orders`, order, config);
     dispatch({ type: ORDER_CREATE_SUCCESS, payload: data });
     dispatch({ type: CART_CLEAR_ITEMS, payload: data });
 
@@ -67,7 +67,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:5000/api/orders/${id}`, config);
+    const { data } = await axios.get(`https://soutout.online/api/orders/${id}`, config);
     console.log("action data ", data);
     dispatch({ type: ORDER_DETAILS_SUCCESS, payload: data });
   } catch (error) {
@@ -103,7 +103,7 @@ export const payOrder =
       };
 
       const { data } = await axios.put(
-        `http://localhost:5000/api/orders/${orderId}/pay`,
+        `https://soutout.online/api/orders/${orderId}/pay`,
         paymentResult,
         config
       );
@@ -138,7 +138,7 @@ export const listMyOrders = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`http://localhost:5000/api/orders/`, config);
+    const { data } = await axios.get(`https://soutout.online/api/orders/`, config);
     dispatch({ type: ORDER_LIST_MY_SUCCESS, payload: data });
   } catch (error) {
     const message =

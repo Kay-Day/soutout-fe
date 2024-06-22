@@ -8,7 +8,7 @@ import {
 
 // ADD TO CART
 export const addToCart = (id, qty, typePay) => async (dispatch, getState) => {
-  const { data } = await axios.get(`http://localhost:5000/api/products/${id}`);
+  const { data } = await axios.get(`https://soutout.online/api/products/${id}`);
 
   dispatch({
     type: CART_ADD_ITEM,

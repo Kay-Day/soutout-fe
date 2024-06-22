@@ -20,7 +20,7 @@ const Dialog = ({ idParent, isOpenDialog, setCloseDialog, onClickOpen }) => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://localhost:5000/api/category/all/status-detail/${idParent}`
+        `https://soutout.online/api/category/all/status-detail/${idParent}`
       );
       if (res.status === 200) {
         setListItem(res.data);
